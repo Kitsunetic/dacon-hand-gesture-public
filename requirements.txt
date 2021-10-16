@@ -1,0 +1,11 @@
+Albumentations
+opencv-python
+imageio
+numpy
+pandas
+timm
+torch==1.7.0
+pyaml
+adabelief_pytorch==0.2.1
+scikit-learn
+tqdm

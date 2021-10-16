@@ -1,0 +1,17 @@
+https://github.com/Kitsunetic/dacon-hand-gesture-public/releases/download/weights/exp017_ver001.pth
+https://github.com/Kitsunetic/dacon-hand-gesture-public/releases/download/weights/exp022_ver006.pth
+https://github.com/Kitsunetic/dacon-hand-gesture-public/releases/download/weights/exp022_ver007.pth
+https://github.com/Kitsunetic/dacon-hand-gesture-public/releases/download/weights/exp022_ver008.pth
+https://github.com/Kitsunetic/dacon-hand-gesture-public/releases/download/weights/exp022_ver009.pth
+https://github.com/Kitsunetic/dacon-hand-gesture-public/releases/download/weights/exp022_ver010.pth
+https://github.com/Kitsunetic/dacon-hand-gesture-public/releases/download/weights/exp022_ver011.pth
+https://github.com/Kitsunetic/dacon-hand-gesture-public/releases/download/weights/exp022_ver012.pth
+https://github.com/Kitsunetic/dacon-hand-gesture-public/releases/download/weights/exp022_ver013.pth
+https://github.com/Kitsunetic/dacon-hand-gesture-public/releases/download/weights/exp022_ver014.pth
+https://github.com/Kitsunetic/dacon-hand-gesture-public/releases/download/weights/exp022_ver015.pth
+https://github.com/Kitsunetic/dacon-hand-gesture-public/releases/download/weights/exp022_ver016.pth
+https://github.com/Kitsunetic/dacon-hand-gesture-public/releases/download/weights/exp022_ver017.pth
+https://github.com/Kitsunetic/dacon-hand-gesture-public/releases/download/weights/exp022_ver018.pth
+https://github.com/Kitsunetic/dacon-hand-gesture-public/releases/download/weights/exp022_ver019.pth
+https://github.com/Kitsunetic/dacon-hand-gesture-public/releases/download/weights/exp022_ver020.pth
+https://github.com/Kitsunetic/dacon-hand-gesture-public/releases/download/weights/exp023_ver007.pth
