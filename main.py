@@ -647,58 +647,32 @@ class GestureTrainer:
 
 
 def main():
-    for model, batch_size in [
-        # ["tf_efficientnet_b3_ns", 45],
-        # ["tf_efficientnet_b4_ns", 30],
-        # ["tf_efficientnet_b5_ns", 20],
-        # ["tf_efficientnet_b6_ns", 15],
-        # ["tf_efficientnet_b7_ns", 45],
-        # ["efficientnetv2_s", 50],
-        ["tf_efficientnetv2_l_in21ft1k", 54],
-        # ["tf_efficientnetv2_m_in21ft1k", 25],
-        # ["tf_efficientnetv2_s_in21ft1k", 45],
-        # ["tf_efficientnetv2_b3", 50],
-        # ["tf_efficientnetv2_l", 50],
-        # ["tf_efficientnetv2_m", 25],
-        # ["tf_efficientnetv2_s", 45],
-        # ["dm_nfnet_f0", 50],
-        # ["dm_nfnet_f1", 34],
-        # ["dm_nfnet_f2", 18],
-    ]:
-        for optimizer in ["AdaBelief"]:
-            for fold in [1, 2, 3, 4, 5]:
-                for seed in [4]:
-                    for lr in [1e-3, 1e-4]:
-                        config = Config(
-                            debug=False,
-                            finetune=True,
-                            model_name=model,
-                            batch_size=batch_size,
-                            sam=True,
-                            cleared_image=False,
-                            pretrained=True,
-                            optimizer_name=optimizer,
-                            fold=fold,
-                            seed=seed,
-                            num_workers=16,
-                            in_memory=True,
-                            lr=lr,
-                        )
+    config = Config(
+        debug=False,
+        finetune=True,
+        model_name="tf_efficientnetv2_l_in21ft1k",
+        batch_size=18,
+        sam=True,
+        cleared_image=False,
+        pretrained=True,
+        optimizer_name="AdaBelief",
+        fold=1,
+        seed=1,
+        num_workers=4,
+        in_memory=True,
+    )
 
-                        config.result_dir = make_result_dir(config)
-                        shutil.copy(__file__, config.result_dir / Path(__file__).name)
-                        config.to_yaml(config.result_dir / "params.yaml")
+    config.result_dir = make_result_dir(config)
+    shutil.copy(__file__, config.result_dir / Path(__file__).name)
+    config.to_yaml(config.result_dir / "params.yaml")
 
-                        # config.result_dir = Path("results/exp/exp022/version_002")
-                        # config.ver_num = 2
+    trainer = GestureTrainer(config)
+    trainer.fit()
+    trainer.submit()
 
-                        trainer = GestureTrainer(config)
-                        trainer.fit()
-                        trainer.submit()
-
-                        del trainer
-                        gc.collect()
-                        torch.cuda.empty_cache()
+    del trainer
+    gc.collect()
+    torch.cuda.empty_cache()
 
 
 if __name__ == "__main__":
